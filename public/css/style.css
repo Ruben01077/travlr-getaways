@@ -39,6 +39,9 @@ img {
 	margin-bottom: 20px;
 	margin-left: 49px;
 }
+
+
+
 /** Navigation **/
 #navigation {
 	background: url(../images/bg-navigation.png) no-repeat;
@@ -334,6 +337,10 @@ hr {
 	float: right;
 	border: 1px solid #2c9688;
 	margin-left: 15px;
+	
+	width: 360px;     
+    height: 243px;     
+    object-fit: cover; 
 }
 /** News **/
 #news {
