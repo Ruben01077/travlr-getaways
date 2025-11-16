@@ -1,6 +1,6 @@
-var express = require("express")
-var router = express.Router()
-var controllers = require("../controllers/travel")
+const express = require("express")
+const router = express.Router()
+const controllers = require("../controllers/travel")
 
 //GET travel page
 

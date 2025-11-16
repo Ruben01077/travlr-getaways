@@ -1,0 +1,32 @@
+[
+  {
+    "code": "Z100",
+    "name": "New Zealand Adventure",
+    "length": "7 nights",
+    "start": "2026-01-15",
+    "resort": "Queenstown Lodge",
+    "perPerson": "1999.00",
+    "image": "NewZeland.jpg",
+    "description": "Explore the stunning landscapes of New Zealand with guided tours and adventure activities."
+  },
+  {
+    "code": "H200",
+    "name": "Hawaii Beach Escape",
+    "length": "5 nights",
+    "start": "2026-03-10",
+    "resort": "Maui Oceanfront Resort",
+    "perPerson": "1499.00",
+    "image": "Hawaii.jpg",
+    "description": "Relax on the beaches of Maui with all-inclusive amenities and excursions."
+  },
+  {
+  "code": "B200",
+  "name": "Bali Island Escape",
+  "length": "5 nights",
+  "start": "2026-03-10",
+  "resort": "Sunset Cove Resort",
+  "perPerson": "1499.00",
+  "image": "Bali.jpg",
+  "description": "Relax on the tropical beaches of Bali and enjoy cultural tours, spa treatments, and scenic island excursions."
+}
+]
