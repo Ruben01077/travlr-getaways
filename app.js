@@ -4,7 +4,7 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const createError = require('http-errors');
 const hbs = require('hbs');
-
+require('./app_api/models/db');
 const app = express();
 const port = 3000;
 
@@ -12,6 +12,8 @@ const port = 3000;
 const indexRouter  = require('./app_server/routes/index');
 const usersRouter  = require('./app_server/routes/users');
 const travelRouter = require('./app_server/routes/travel');
+
+
 
 // View engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));
