@@ -1,9 +1,8 @@
-const express = require("express")
-const router = express.Router()
-const controllers = require("../controllers/travel")
+const express = require('express');
+const router = express.Router();
+const ctrlTravel = require('../controllers/travel');
 
-//GET travel page
+// GET travel page
+router.get('/', ctrlTravel.travel);
 
-router.get("/", controllers.travel)
-
-module.exports = router
+module.exports = router;

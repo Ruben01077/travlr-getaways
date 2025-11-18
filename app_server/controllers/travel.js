@@ -1,18 +1,25 @@
-// app_server/controllers/travel.js
+const mongoose = require('mongoose');
+const Trip = mongoose.model('Trip');
 
-// Load trips.json
-const tripsData = require("../../data/trips.json")
-
-// GET travel page (dynamic)
-const travel = (req, res) => {
-    res.render("travel", { 
-        title: "Travlr Getaways",
-        trips: tripsData
+// GET travel view
+const travel = async (req, res) => {
+  try {
+    const trips = await Trip.find({}).exec(); // read from MongoDB
+    res.render('travel', {
+      title: 'Travlr Getaways',
+      trips
     });
+  } catch (err) {
+    console.error('Error fetching trips for travel page:', err);
+    res.render('travel', {
+      title: 'Travlr Getaways',
+      trips: []
+    });
+  }
 };
 
 module.exports = {
-    travel
+  travel
 };
 
 
