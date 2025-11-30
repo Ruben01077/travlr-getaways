@@ -1,4 +1,4 @@
-
+// app_api/models/db.js
 const mongoose = require('mongoose');
 
 const dbURI = 'mongodb://127.0.0.1:27017/travlr';
@@ -17,5 +17,5 @@ mongoose.connection.on('disconnected', () => {
   console.log('Mongoose disconnected');
 });
 
-// Load models
+// load models
 require('./trips');
