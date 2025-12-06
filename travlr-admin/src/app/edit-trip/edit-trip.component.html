@@ -1,0 +1,61 @@
+<h1>Edit Trip</h1>
+
+<div *ngIf="error" class="alert alert-danger">
+  {{ error }}
+</div>
+
+<form #tripForm="ngForm" (ngSubmit)="onSubmit(tripForm)">
+  <div class="mb-3">
+    <label class="form-label">Code</label>
+    <input class="form-control" name="code" [(ngModel)]="trip.code" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input class="form-control" name="name" [(ngModel)]="trip.name" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Length (days)</label>
+    <input type="number" class="form-control" name="length"
+           [(ngModel)]="trip.length" required min="1">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Start date</label>
+    <input type="date" class="form-control" name="start"
+           [(ngModel)]="trip.start" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Resort</label>
+    <input class="form-control" name="resort" [(ngModel)]="trip.resort" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Price per person</label>
+    <input type="number" class="form-control" name="perPerson"
+           [(ngModel)]="trip.perPerson" required min="0">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Image filename</label>
+    <input class="form-control" name="image" [(ngModel)]="trip.image">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Description</label>
+    <textarea class="form-control" name="description" rows="4"
+              [(ngModel)]="trip.description" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary me-2"
+          [disabled]="tripForm.invalid">
+    Update
+  </button>
+  <button type="button" class="btn btn-danger me-2"
+          (click)="onDelete()">
+    Delete
+  </button>
+  <a routerLink="/list" class="btn btn-secondary">Cancel</a>
+</form>

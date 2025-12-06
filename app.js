@@ -7,6 +7,8 @@ const hbs = require('hbs');
 require('./app_api/models/db');
 const app = express();
 const port = 3000;
+const cors = require('cors');
+
 
 // Routers
 const indexRouter  = require('./app_server/routes/index');
@@ -25,6 +27,15 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+
+app.use(cors({
+  origin: 'http://localhost:4200',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization']
+}));
+
+
 
 // Routes
 app.use('/', indexRouter);
